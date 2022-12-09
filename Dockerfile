@@ -16,7 +16,7 @@ RUN dotnet build "StudentProjectAttempt6/StudentProjectAttempt6.csproj" -c Relea
 
 FROM build AS publish
 RUN dotnet publish "StudentProjectAttempt6/StudentProjectAttempt6.csproj" -c Release -o /app
-
+ENV ASPNETCORE_ENVIRONMENT=Development
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app .
