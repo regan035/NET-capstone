@@ -15,8 +15,5 @@ spec:
       containers:
         - name: regannetcapstone 
           image: jumpcapstone.azurecr.io/regannetcapstone
-          env:
-          - name: ASPNETCORE_ENVIRONMENT 
-            value: "Development"
           ports:
           - containerPort: 80
